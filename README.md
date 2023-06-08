@@ -30,7 +30,7 @@ and an appointment window length of 60m (=3600s) with the creation of an output 
 
 ```markdown
 $ make
-$ /bin/columnGeneration ../test-data/model-data-paper/paper-evaluation-small-tw-0/bayern/bayern0_r20_d5_w0.2.dat -w 3600 -o
+$ ./bin/columnGeneration ../test-data/model-data-paper/paper-evaluation-small-tw-0/bayern/bayern0_r20_d5_w0.2.dat -w 3600 -o
 ```
 
 If no values for the objective parameters are given, the default values are (1, 0, 0) is used.
