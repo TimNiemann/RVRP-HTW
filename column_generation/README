@@ -1,0 +1,21 @@
+README for VRP column generation project
+
+Usage:
+$ make
+$ ./bin/columnGeneration <path-to-modeldata-file.dat> 
+    [-w <appointment window length in sec (mandatory)>] 
+    [-c <objective function weigth in [0,1] (mandatory)>]
+    [-o <output json file (optional; default used if no name is provided)>]
+    [-s <input solution json file (mandatory)>]
+    [-a <objective function parameters (delay, travel time, encounter probability) (default: 1, 0, 0) (mandatory) >\
+    [-g <value for Gamma (mandatory)>]
+
+Example usage with modeldata "bayern0_r20_d5_w0.2.dat" in "../test-data/model-data-paper/paper-evaluation-small-tw-0/bayern" and an appointment window length of 60m (=3600s) with the creation of an output file:
+$ make
+$ /bin/columnGeneration ../test-data/model-data-paper/paper-evaluation-small-tw-0/bayern/bayern0_r20_d5_w0.2.dat -w 3600 -o
+
+
+If no values for the objective parameters are given, the default values are (1, 0, 0) is used.
+If no appointment window length is given, the default value of 0 is used.
+If no outputfile name is given, "outputfile.json" is used.
+Configuration for debugging and parameters for heuristics can be set in "src/tools_vrp.h".

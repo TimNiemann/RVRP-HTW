@@ -1,0 +1,13 @@
+## Usage
+
+$ make
+$ ./bin/evaluation <path-to-modeldata-file.dat> <path-to-solutiondata-file.dat>
+    [-o <output json file (optional; default used if no name is provided)>]
+    [-d <deviation factor (mandatory)>] \
+    [-n <number of simulations (mandatory)>]
+    [-p activate console print]
+
+If no output file name is given, "evaluation.json" is used.
+If no deviation factor is given, the default value of 1.0 is used.
+if no number simulations is given, the default value of 100 is used.
+Configuration for debugging and parameters for heuristics can be set in "src/tools_evaluation.h".
